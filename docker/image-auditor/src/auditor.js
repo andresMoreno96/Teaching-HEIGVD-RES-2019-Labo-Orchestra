@@ -11,7 +11,7 @@ var simpleServerTCP =net.createServer(function (socket){
     musicians.forEach(element=>{
         console.log(Date.now()-element.timestamp);
         /*check if the musician has emmited a sound the last second or is inactive */
-        if(Date.now()-element.timestamp >1000){
+        if(Date.now()-element.timestamp >=5000){
             musicians.remove(element.uuid);
 
         }
